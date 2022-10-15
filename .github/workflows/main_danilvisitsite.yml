@@ -62,15 +62,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6A6D51F3BA59422EA4EE693A9EFED499 }}
           
-    - name: 'bordanchannel@gmail.com'
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_US_GOV_CREDENTIALS }}
-        environment: 'AzureUSGovernment'
-        enable-AzPSSession: false
-    - name: Login to Azure US Gov Cloud with Az Powershell
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_US_GOV_CREDENTIALS }}
-        environment: 'AzureUSGovernment'
-        enable-AzPSSession: true
